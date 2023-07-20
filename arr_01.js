@@ -1,7 +1,7 @@
 /*********   Theorie **********/
 
-// // push() / pop()
-// // push --> Daten rein ... (+)
+// push() / pop()
+// push --> Daten rein ... (+)
 // let arr = [];
 
 // output(arr);
@@ -47,7 +47,7 @@ const TAGS = [  "html",
 let stack = [];
 
 // Modul: HTML-Synthese | Test
-//output(getHTML());
+output(getHTML());
 function getHTML() {
   
     let htmlStr = "";
@@ -72,9 +72,11 @@ function getHTML() {
 function getElement(tag,op) {
     switch (op) {
         case "open":
-            return COBJ.open_o + tag + COBJ.close;
+            // return COBJ.open_o + tag + COBJ.close;
+            return CONTROLS[0] + tag + CONTROLS[2];
         case "close":
-            return COBJ.close_o + tag + COBJ.close;
+            // return COBJ.close_o + tag + COBJ.close;
+            return CONTROLS[1] + tag + CONTROLS[2];
         default:
             return ERR_STR;
     }
